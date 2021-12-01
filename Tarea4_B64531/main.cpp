@@ -25,7 +25,7 @@ int main() {
 
         if (!proveedorFormatoEspanol.is_open())
         {
-            std::cerr << "Error leyendo archivo formato.ini" << std::endl;
+            std::cerr << "Error leyendo archivo formatoHola.ini" << std::endl;
             return -1;
         }
         
@@ -33,7 +33,7 @@ int main() {
 
         if (!proveedorFormatoIngles.is_open())
         {
-            std::cerr << "Error leyendo archivo formato.ini" << std::endl;
+            std::cerr << "Error leyendo archivo formatoHello.ini" << std::endl;
             return -1;
         }
         
@@ -44,7 +44,7 @@ int main() {
         operaciones.insert(std::pair<string, Operacion *>("hola", operacionHola));
         
         OperacionHola *operacionHello = new OperacionHola(proveedorFormatoHello);
-        operaciones.insert(std::pair<string, Operacion *>("hello", operacionHola));
+        operaciones.insert(std::pair<string, Operacion *>("hello", operacionHello));
         
         OperacionSuma *operacionSuma = new OperacionSuma();
         operaciones.insert(std::pair<string, Operacion*>("suma", operacionSuma));
@@ -58,7 +58,7 @@ int main() {
         cout << "Resultado saludo en español: " << resultadoHola << endl;
 
 
-        string resultadoSuma = procesador->Procese("suma", "2 + 5");
+        string resultadoSuma = procesador->Procese("suma", "-96 + 5");
         cout << "Resultado suma: " << resultadoSuma << endl;
 
         string resultadoHello = procesador->Procese("hello", "everyone");
