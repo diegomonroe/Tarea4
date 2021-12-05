@@ -1,0 +1,23 @@
+#include "pch.cpp"
+
+using namespace std;
+
+namespace {
+   Test(OperacionSuma_Test, Test_Resultado_Correcto){
+      
+       OperacionSuma *operacionSuma = new OperacionSuma();
+       string actual = operacionSuma -> Ejecute("2+5");
+       string esperado = "5";
+
+       EXPECT_EQ(esperado);
+   }
+
+
+   Test(OperacionSuma_Test, Test_Datos_Incorrectos){
+
+        OperacionSuma *operacionSuma = new OperacionSuma();
+
+        EXPECT_THROW({
+            string actual = operacionSuma -> Ejecute("error");
+        }, ExcepcionOperacionSumaDatosIncorrectos);
+}

@@ -1,7 +1,10 @@
+#include "pch.h"
+
 #include <gtest/gtest.h>
 #include <string>
 #include <sstream>
-#include "./../src/proveedorFormatoDesdeStream.h"
+#include "../Tarea4_B64531/proveedorFormatoDesdeStream.h"
+#include "../Tarea4_B64531/proveedorFormatoDesdeStream.cpp"
 
 using namespace std;
 

@@ -11,6 +11,7 @@
 
 #include "proveedorFormato.h"
 #include "proveedorFormatoDesdeStream.h"
+#include "excepcionOperacionSumaDatosIncorrectos.h"
 
 using namespace std;
 
@@ -58,7 +59,7 @@ int main() {
         cout << "Resultado saludo en español: " << resultadoHola << endl;
 
 
-        string resultadoSuma = procesador->Procese("suma", "-96 + 5");
+        string resultadoSuma = procesador->Procese("suma", " 0+ 5");
         cout << "Resultado suma: " << resultadoSuma << endl;
 
         string resultadoHello = procesador->Procese("hello", "everyone");
@@ -80,6 +81,9 @@ int main() {
     } catch (char const* exception)
     {
         cerr << "Error: " << exception << endl;
+    }catch (const ExcepcionOperacionSumaDatosIncorrectos& exception)
+    {
+        cerr << exception.what() << endl;
     }
     
     return 0;

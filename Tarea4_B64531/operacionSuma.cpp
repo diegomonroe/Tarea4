@@ -1,20 +1,28 @@
 #include "operacionSuma.h"
+#include "ExcepcionOperacionSumaDatosIncorrectos.h"
+
 #include <string>
 #include <sstream>
+
 
 OperacionSuma::OperacionSuma() {
 }
 
 string OperacionSuma::Ejecute(string entrada) {
- 
-    int primerValor = 0;
-    int segundoValor = 0;
-    char signo = ' ';
-    
-    istringstream streamNumeros(entrada);
+    string valor{};
+    int primerValor{};
+    int segundoValor{};
+    char signo{};
+
+	istringstream streamNumeros(entrada);
     streamNumeros >> primerValor >> signo >> segundoValor;
-    
+
+    if (signo != '+') {
+        throw ExcepcionOperacionSumaDatosIncorrectos();
+    }
+
     int resultadoOperacion = primerValor + segundoValor;
-    string valor = to_string(resultadoOperacion);
+    valor = to_string(resultadoOperacion);
+	
     return valor;
 }

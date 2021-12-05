@@ -1,6 +1,9 @@
+#include "pch.h"
+
 #include <gtest/gtest.h>
 #include <string>
-#include "./../src/operacionHola.h"
+#include "../Tarea4_B64531/operacionHola.h"
+#include "../Tarea4_B64531/operacionHola.cpp"
 #include "proveedorFormatoPrueba.h"
 
 using namespace std;

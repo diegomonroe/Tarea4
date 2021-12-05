@@ -1,7 +1,10 @@
+#include "pch.h"
+
 #include <gtest/gtest.h>
 #include <string>
-#include "./../src/procesador.h"
-#include "./../src/procesadorInstrucciones.h"
+#include "../Tarea4_B64531/procesador.h"
+#include "../Tarea4_B64531/procesadorInstrucciones.h"
+#include "../Tarea4_B64531/procesadorInstrucciones.cpp"
 #include "identificadorOperacionPrueba.h"
 #include "operacionPrueba.h"
 
